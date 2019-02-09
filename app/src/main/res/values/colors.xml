@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#f1f2f6</color>
+    <color name="colorAccent">#D9000000</color>
+    <color name="colorAccentSecondary">#2c3e50</color>
+    <color name="colorBackground">#F9CA24</color>
+    <color name="colorPostsBackground">@color/colorPrimaryDark</color>
+</resources>
