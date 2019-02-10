@@ -14,6 +14,5 @@ interface FeedContract {
 
     interface Presenter {
         fun fetchPosts()
-        fun showPostComments(post: Post)
     }
 }

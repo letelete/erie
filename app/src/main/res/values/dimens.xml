@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_extra_large">24dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+
+    <dimen name="margin_between_sections_large">48dp</dimen>
+    <dimen name="margin_between_sections_small">24dp</dimen>
+
+    <dimen name="margin_between_vertical_text_sections_large">8dp</dimen>
+    <dimen name="margin_between_vertical_text_sections_small">4dp</dimen>
+
+    <!--
+        @ margin_comment = @ size_user_image_large + @ margin_small
+    -->
+    <dimen name="margin_comment">37dp</dimen>
+
+    <dimen name="size_user_image_large">29dp</dimen>
+    <dimen name="size_user_image_small">16dp</dimen>
+
+    <dimen name="radius_feedpost">7dp</dimen>
+
+    <dimen name="text_size_extra_large">20sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="height_toolbar">56dp</dimen>
+
+    <dimen name="size_illustratedhint_illustration">40dp</dimen>
+    <dimen name="elevation_toolbar">1dp</dimen>
+    <dimen name="elevation_feed">3dp</dimen>
+
+</resources>

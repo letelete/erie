@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="match_parent"
+                                                      android:orientation="vertical"
+                                                      app:layoutDescription="@xml/motion_feed_collapsingtoolbar"
+                                                      app:showPaths="false"
+>
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_feed_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_toolbar"
+            android:background="@drawable/background_toolbar"
+            android:elevation="@dimen/elevation_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                           android:id="@+id/swiperefreshlayout_feed_updateposts"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="0dp"
+                                                           app:layout_constraintBottom_toBottomOf="parent"
+                                                           app:layout_constraintEnd_toEndOf="parent"
+                                                           app:layout_constraintStart_toStartOf="parent"
+                                                           app:layout_constraintTop_toBottomOf="@+id/toolbar_feed_logo"
+    >
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_feed_posts"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorAppBackground"
+        />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

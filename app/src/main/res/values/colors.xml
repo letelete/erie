@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryDark">#f1f2f6</color>
-    <color name="colorAccent">#D9000000</color>
-    <color name="colorAccentSecondary">#2c3e50</color>
-    <color name="colorBackground">#F9CA24</color>
-    <color name="colorPostsBackground">@color/colorPrimaryDark</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#f5f5f5</color>
+    <color name="colorAccent">#82FF98</color>
+    <color name="colorAccentSecondary">#000000</color>
+
+    <color name="colorElementsBackground">@color/colorPrimary</color>
+    <color name="colorAppBackground">@color/colorPrimaryDark</color>
+
+    <!-- 100, 87, 54 etc.. - OPACITY IN PERCENTAGE -->
+    <color name="colorBlack100">#000000</color>
+    <color name="colorBlack87">#DE000000</color>
+    <color name="colorBlack54">#8A000000</color>
 </resources>

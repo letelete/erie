@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                      xmlns:tools="http://schemas.android.com/tools"
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="match_parent"
+                                                      android:background="@color/colorPrimary"
+>
+
+    <TextView
+            android:id="@+id/textview_post_title"
+            style="@style/ErieTheme.Text.PostTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_large"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginEnd="@dimen/margin_extra_large"
+            android:text="So... How to exit vim?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:id="@+id/textview_author_userimage"
+            android:layout_width="@dimen/size_user_image_small"
+            android:layout_height="@dimen/size_user_image_small"
+            android:layout_marginStart="@dimen/margin_extra_large"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_post_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textview_post_details"
+            tools:srcCompat="@tools:sample/avatars"
+    />
+
+    <TextView
+            android:id="@+id/textview_post_details"
+            style="@style/ErieTheme.Text.Details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_extra_large"
+            android:text="3/3/2018 • 1 min read"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textview_author_userimage"
+            app:layout_constraintTop_toBottomOf="@+id/textview_post_title"
+    />
+
+    <TextView
+            android:id="@+id/textview_post_body"
+            style="@style/ErieTheme.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_extra_large"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices nunc, mattis varius urna. Mauris mollis, felis ac volutpat imperdiet, enim arcu accumsan libero, a bibendum arcu libero sit amet enim. Maecenas viverra diam felis, euismod vulputate sem ullamcorper malesuada. Aenean tincidunt sem ac odio feugiat finibus. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_author_userimage"
+    />
+
+    <View
+            android:id="@+id/divider4"
+            style="@style/ErieTheme.Divider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_post_body"
+    />
+
+    <include
+            android:id="@+id/include_post_author"
+            layout="@layout/include_all_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_extra_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+    />
+
+    <View
+            android:id="@+id/divider_post_between_sections"
+            style="@style/ErieTheme.Divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_between_sections_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_post_author"
+    />
+
+    <ImageView
+            android:id="@+id/imageview_post_discussion_illustration"
+            android:layout_width="@dimen/size_illustratedhint_illustration"
+            android:layout_height="@dimen/size_illustratedhint_illustration"
+            android:src="@drawable/ic_discussion"
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="384dp"
+    />
+
+    <TextView
+            android:id="@+id/textview_post_discussion_title"
+            style="@style/ErieTheme.Text.HintTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/discussion"
+            app:layout_constraintEnd_toEndOf="@+id/imageview_post_discussion_illustration"
+            app:layout_constraintStart_toStartOf="@+id/imageview_post_discussion_illustration"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_post_discussion_illustration"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_post_discussion_comments"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_extra_large"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginEnd="@dimen/margin_extra_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_post_discussion_title"
+    />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
