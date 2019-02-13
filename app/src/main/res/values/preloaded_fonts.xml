@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/lora</item>
-        <item>@font/lora_bold</item>
+        <item>@font/open_sans</item>
+        <item>@font/playfair_display_bold</item>
     </array>
 </resources>

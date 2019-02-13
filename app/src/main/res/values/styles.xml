@@ -4,11 +4,39 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="ErieTheme.Launcher">
         <item name="android:windowBackground">@drawable/launch_screen</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="ErieTheme.Text">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/colorBlack87</item>
+    </style>
+
+    <style name="ErieTheme.Text.Details">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/colorBlack54</item>
+    </style>
+
+    <style name="ErieTheme.Text.PostTitle">
+        <item name="android:fontFamily">@font/playfair_display_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="ErieTheme.Text.HintTitle" parent="ErieTheme.Text.PostTitle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/colorBlack100</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ErieTheme.Divider">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
 </resources>

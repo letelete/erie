@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Erie</string>
+    <string name="logo_description">App Logo</string>
+    <string name="discussion">Discussion</string>
+    <string name="we_just_ran_out_of_stories">We just ran out of stories :(</string>
 </resources>

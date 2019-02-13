@@ -6,8 +6,9 @@ import dagger.android.AndroidInjection
 import io.erie.R
 import io.erie.base.BaseActivity
 import io.erie.model.Post
+import io.erie.ui.feed.adapters.FeedAdapter
 import io.reactivex.disposables.Disposable
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_feed.*
 import javax.inject.Inject
 
 class FeedActivity : BaseActivity<FeedPresenter>(), FeedContract.View {
@@ -15,40 +16,43 @@ class FeedActivity : BaseActivity<FeedPresenter>(), FeedContract.View {
     @Inject
     lateinit var feedAdapter: FeedAdapter
 
-    private var postClickedSubscription: Disposable? = null
+    private var scrollToTopDisposable: Disposable? = null
 
     override fun inject() {
         AndroidInjection.inject(this)
     }
 
-    override fun getLayout(): Int = R.layout.activity_main
+    override fun getLayout(): Int = R.layout.activity_feed
 
     override fun initializeView() {
-        recyclerview_main_posts.apply {
+        setSupportActionBar(toolbar_feed_logo)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        recyclerview_feed_posts.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
             adapter = feedAdapter
         }
 
-        postClickedSubscription = feedAdapter.clickItemEvent
-            .subscribe { presenter.showPostComments(it) }
-
-        swiperefreshlayout_main_updateposts.setOnRefreshListener {
+        swiperefreshlayout_feed_updateposts.setOnRefreshListener {
             presenter.fetchPosts()
         }
+
+        scrollToTopDisposable = feedAdapter
+            .scrollToTopEvent.subscribe { recyclerview_feed_posts.smoothScrollToPosition(0) }
 
         presenter.fetchPosts()
     }
 
     override fun showLoading() {
-        if (!swiperefreshlayout_main_updateposts.isRefreshing) {
-            swiperefreshlayout_main_updateposts.isRefreshing = true
+        if (!swiperefreshlayout_feed_updateposts.isRefreshing) {
+            swiperefreshlayout_feed_updateposts.isRefreshing = true
         }
     }
 
     override fun hideLoading() {
-        if (swiperefreshlayout_main_updateposts.isRefreshing) {
-            swiperefreshlayout_main_updateposts.isRefreshing = false
+        if (swiperefreshlayout_feed_updateposts.isRefreshing) {
+            swiperefreshlayout_feed_updateposts.isRefreshing = false
         }
     }
 
