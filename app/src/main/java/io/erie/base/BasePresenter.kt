@@ -17,6 +17,6 @@ abstract class BasePresenter<out V> {
 
     open fun detachView() {
         view = null
-        compositeObservable.dispose()
+        compositeObservable.clear()
     }
 }

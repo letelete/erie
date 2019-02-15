@@ -1,12 +1,12 @@
 package io.erie.ui.feed
 
-import io.erie.base.AppSchedulers
 import io.erie.base.BasePresenter
+import io.erie.base.BaseSchedulers
 import io.erie.network.ApiService
 import javax.inject.Inject
 
 class FeedPresenter @Inject constructor(
-    private val schedulers: AppSchedulers,
+    private val schedulers: BaseSchedulers,
     private val apiService: ApiService
 ) : BasePresenter<FeedContract.View>(),
     FeedContract.Presenter {
@@ -16,11 +16,11 @@ class FeedPresenter @Inject constructor(
     }
 
     override fun fetchPosts() {
-        getView()?.showLoading()
         compositeObservable.add(
             apiService.posts()
-                .observeOn(schedulers.mainTread())
-                .subscribeOn(schedulers.backgroundThread())
+                .doOnSubscribe { getView()?.showLoading() }
+                .observeOn(schedulers.ui())
+                .subscribeOn(schedulers.io())
                 .doOnTerminate { getView()?.hideLoading() }
                 .subscribe(
                     { getView()?.showPostsList(it) },
