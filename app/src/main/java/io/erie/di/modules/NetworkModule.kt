@@ -15,7 +15,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideSchedulers(): AppSchedulers = AppSchedulers()
+    fun provideAppSchedulers(): AppSchedulers = AppSchedulers()
 
     @Provides
     @Singleton
