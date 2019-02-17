@@ -14,9 +14,9 @@
 
 ---
 
-🎵  App architecture: MVP (Model-View-Presenter)
+🔥  App architecture: MVP (Model-View-Presenter)
 
-🎶 Technologies:
+🔥 Technologies:
 
 * Kotlin
 * RxJava2
@@ -24,4 +24,9 @@
 * Retrofit
 * Glide
 * MotionLayout
-* Paging
+  
+# Design Concept
+
+3 color modes: Dark, Amoled, Light
+
+![concept](./art/concept.jpg)
