@@ -14,9 +14,9 @@
 
 ---
 
-🔥  App architecture: MVP (Model-View-Presenter)
+App architecture: MVP (Model-View-Presenter)
 
-🔥 Technologies:
+Technologies:
 
 * Kotlin
 * RxJava2

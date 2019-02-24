@@ -1,0 +1,155 @@
+<!--
+    All app themes goes here
+-->
+
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">?themePrimaryColor</item>
+        <item name="colorPrimaryDark">?themePrimaryDarkColor</item>
+        <item name="colorAccent">?themeAccentColor</item>
+        <item name="themeTopHeadlinesAccentColor">@color/orange_aggressive</item>
+        <item name="themeTopHeadlinesAccentColor20">@color/orange_aggressive20</item>
+        <item name="themeAllArticlesAccentColor">@color/purple</item>
+        <item name="themeAllArticlesAccentColor20">@color/purple20</item>
+        <item name="android:navigationBarColor">?themeAppNavBarBackgroundColor</item>
+        <item name="themeBottomBarTopHeadlinesFabColor">?themeTopHeadlinesAccentColor</item>
+        <item name="themeBottomBarAllArticlesFabColor">?themeAllArticlesAccentColor</item>
+        <item name="themeFilterDialogTopHeadlinesAccentColor">?themeTopHeadlinesAccentColor</item>
+        <item name="themeFilterDialogAllArticlesAccentColor">?themeAllArticlesAccentColor</item>
+        <item name="themeChoiceCheckedChipTopHeadlinesTextColor">?themeTopHeadlinesAccentColor</item>
+        <item name="themeChoiceCheckedChipTopHeadlinesBorderColor">?themeTopHeadlinesAccentColor</item>
+        <item name="themeChoiceCheckedChipTopHeadlinesBackgroundColor">?themeTopHeadlinesAccentColor20</item>
+        <item name="themeChoiceCheckedChipAllArticlesTextColor">?themeAllArticlesAccentColor</item>
+        <item name="themeChoiceCheckedChipAllArticlesBorderColor">?themeAllArticlesAccentColor</item>
+        <item name="themeChoiceCheckedChipAllArticlesBackgroundColor">?themeAllArticlesAccentColor</item>
+        <item name="themeChoiceChipBackgroundColor">@android:color/transparent</item>
+        <item name="themeFilterChipBackgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Light">
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="themePrimaryColor">@color/white</item>
+        <item name="themePrimaryDarkColor">@color/white_dark</item>
+        <item name="themeAccentColor">@color/orange_aggressive</item>
+
+        <item name="themeAppBackgroundColor">@color/white_dark</item>
+        <item name="themeAppNavBarBackgroundColor">@color/white_dark</item>
+
+        <item name="themeTopBarTitleTextColor">@color/black87</item>
+        <item name="themeTopBarBackgroundColor">@color/white</item>
+        <item name="themeTopBarIconTintColor">@color/black60</item>
+
+        <item name="themeArticleTitleTextColor">@color/black87</item>
+        <item name="themeArticleDividerColor">@color/black12</item>
+        <item name="themeArticleAuthorTextColor">@color/black87</item>
+        <item name="themeArticleBadgeTextColor">@color/white</item>
+        <item name="themeArticleBadgeBackgroundColor">@color/gray_dark</item>
+        <item name="themeArticleDetailsTextColor">@color/black60</item>
+        <item name="themeArticleCardBackgroundColor">@color/white</item>
+        <item name="themeArticleShadowColor">@color/black07</item>
+
+        <item name="themeBottomBarIconsColor">@color/black87</item>
+        <item name="themeBottomBarBackgroundColor">@color/white</item>
+
+        <item name="themeFilterDialogForegroundOnAccentColor">@color/white</item>
+        <item name="themeFilterDialogHintTextColor">@color/black60</item>
+        <item name="themeFilterDialogBackgroundColor">@color/white</item>
+
+        <item name="themeChoiceChipTextColor">@color/black87</item>
+        <item name="themeChoiceChipBorderColor">@color/black12</item>
+
+
+        <item name="themeFilterCheckedChipForegroundColor">@color/black87</item>
+        <item name="themeFilterCheckedChipBorderColor">@color/black87</item>
+        <item name="themeFilterCheckedChipBackgroundColor">@color/black20</item>
+        <item name="themeFilterChipForegroundColor">@color/black87</item>
+        <item name="themeFilterChipBorderColor">@color/black12</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Dark">
+        <item name="themePrimaryColor">@color/gray_dark</item>
+        <item name="themePrimaryDarkColor">@color/black</item>
+        <item name="themeAccentColor">@color/orange_aggressive</item>
+
+        <item name="themeAppBackgroundColor">@color/black</item>
+        <item name="themeAppNavBarBackgroundColor">@color/black</item>
+
+        <item name="themeTopBarTitleTextColor">@color/white87</item>
+        <item name="themeTopBarBackgroundColor">@color/gray_dark</item>
+        <item name="themeTopBarIconTintColor">@color/white60</item>
+
+        <item name="themeArticleTitleTextColor">@color/white87</item>
+        <item name="themeArticleDividerColor">@color/white12</item>
+        <item name="themeArticleAuthorTextColor">@color/white87</item>
+        <item name="themeArticleBadgeTextColor">@color/white87</item>
+        <item name="themeArticleBadgeBackgroundColor">@color/black</item>
+        <item name="themeArticleDetailsTextColor">@color/white60</item>
+        <item name="themeArticleCardBackgroundColor">@color/gray_dark</item>
+        <item name="themeArticleShadowColor">@color/gray_dark</item>
+
+        <item name="themeBottomBarIconsColor">@color/white87</item>
+        <item name="themeBottomBarBackgroundColor">@color/gray_dark</item>
+
+        <item name="themeFilterDialogForegroundOnAccentColor">@color/white</item>
+        <item name="themeFilterDialogHintTextColor">@color/white60</item>
+        <item name="themeFilterDialogBackgroundColor">@color/gray_dark</item>
+
+        <item name="themeChoiceChipTextColor">@color/white87</item>
+        <item name="themeChoiceChipBorderColor">@color/white12</item>
+
+        <item name="themeFilterCheckedChipForegroundColor">@color/white87</item>
+        <item name="themeFilterCheckedChipBorderColor">@color/white87</item>
+        <item name="themeFilterCheckedChipBackgroundColor">@color/white20</item>
+        <item name="themeFilterChipForegroundColor">@color/white87</item>
+        <item name="themeFilterChipBorderColor">@color/white12</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Amoled">
+        <item name="themePrimaryColor">@color/black</item>
+        <item name="themePrimaryDarkColor">@color/black</item>
+        <item name="themeAccentColor">@color/orange_peaceful</item>
+
+        <item name="themeTopHeadlinesAccentColor">@color/orange_peaceful</item>
+        <item name="themeTopHeadlinesAccentColor20">@color/orange_peaceful20</item>
+
+        <item name="themeAppBackgroundColor">@color/black</item>
+        <item name="themeAppNavBarBackgroundColor">@color/black</item>
+
+        <item name="themeTopBarTitleTextColor">@color/white87</item>
+        <item name="themeTopBarBackgroundColor">@color/black</item>
+        <item name="themeTopBarIconTintColor">@color/white60</item>
+
+        <item name="themeArticleTitleTextColor">@color/white70</item>
+        <item name="themeArticleDividerColor">@color/white12</item>
+        <item name="themeArticleAuthorTextColor">@color/white70</item>
+        <item name="themeArticleBadgeTextColor">@color/white70</item>
+        <item name="themeArticleBadgeBackgroundColor">@color/gray_dark</item>
+        <item name="themeArticleDetailsTextColor">@color/white60</item>
+        <item name="themeArticleCardBackgroundColor">@color/black</item>
+        <item name="themeArticleShadowColor">@color/black</item>
+
+        <item name="themeBottomBarIconsColor">@color/white70</item>
+        <item name="themeBottomBarBackgroundColor">@color/black</item>
+
+        <item name="themeFilterDialogForegroundOnAccentColor">@color/white87</item>
+        <item name="themeFilterDialogHintTextColor">@color/white60</item>
+        <item name="themeFilterDialogBackgroundColor">@color/black</item>
+
+        <item name="themeChoiceChipTextColor">@color/white70</item>
+        <item name="themeChoiceChipBorderColor">@color/white12</item>
+
+        <item name="themeFilterCheckedChipForegroundColor">@color/white70</item>
+        <item name="themeFilterCheckedChipBorderColor">@color/white70</item>
+        <item name="themeFilterCheckedChipBackgroundColor">@color/white20</item>
+        <item name="themeFilterChipForegroundColor">@color/white70</item>
+        <item name="themeFilterChipBorderColor">@color/white12</item>
+    </style>
+
+</resources>

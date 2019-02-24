@@ -1,42 +1,100 @@
+<!--
+    All custom styles goes here
+-->
+
 <resources>
 
-    <style name="ErieTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
-
-    <style name="ErieTheme.Launcher">
+    <style name="AppTheme.Launcher">
         <item name="android:windowBackground">@drawable/launch_screen</item>
         <item name="colorPrimaryDark">@android:color/transparent</item>
     </style>
 
-    <style name="ErieTheme.Text">
+    <style name="AppTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">?themeTopBarBackgroundColor</item>
+        <item name="titleTextColor">?themeTopBarTitleTextColor</item>
+    </style>
+
+    <style name="AppTheme.Text">
         <item name="android:fontFamily">@font/open_sans</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textColor">@color/colorBlack87</item>
     </style>
 
-    <style name="ErieTheme.Text.Details">
-        <item name="android:textSize">@dimen/text_size_small</item>
-        <item name="android:textColor">@color/colorBlack54</item>
+    <style name="AppTheme.Text.Title">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">@dimen/activity_title_text_size</item>
+        <item name="android:textColor">?themeTopBarTitleTextColor</item>
     </style>
 
-    <style name="ErieTheme.Text.PostTitle">
-        <item name="android:fontFamily">@font/playfair_display_bold</item>
-        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    <style name="AppTheme.TopTabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">scrollable</item>
+        <item name="iconTint">?themeTopBarIconTintColor</item>
     </style>
 
-    <style name="ErieTheme.Text.HintTitle" parent="ErieTheme.Text.PostTitle">
-        <item name="android:textSize">@dimen/text_size_large</item>
-        <item name="android:textColor">@color/colorBlack100</item>
-        <item name="android:textAlignment">center</item>
-    </style>
+    <style name="AppTheme.Article" />
 
-    <style name="ErieTheme.Divider">
+    <style name="AppTheme.Article.Divider">
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:background">?themeArticleDividerColor</item>
+    </style>
+
+    <style name="AppTheme.Article.Text" parent="AppTheme.Text" />
+
+    <style name="AppTheme.Article.Text.Title">
+        <item name="android:fontFamily">@font/playfair_display_bold</item>
+        <item name="android:textSize">@dimen/article_title_text_size</item>
+        <item name="android:textColor">?themeArticleTitleTextColor</item>
+    </style>
+
+    <style name="AppTheme.Article.Text.Author">
+        <item name="android:textSize">@dimen/article_author_text_size</item>
+        <item name="android:textColor">?themeArticleAuthorTextColor</item>
+    </style>
+
+    <style name="AppTheme.Article.Text.Details">
+        <item name="android:textSize">@dimen/article_details_text_size</item>
+        <item name="android:textColor">?themeArticleDetailsTextColor</item>
+    </style>
+
+    <style name="AppTheme.Article.Text.Badge">
+        <item name="android:textSize">@dimen/article_badge_text_size</item>
+        <item name="android:textColor">?themeArticleBadgeTextColor</item>
+        <item name="android:textAppearance">@style/AppTheme.Article.Text.Badge</item>
+    </style>
+
+    <style name="AppTheme.Text.FilterDialog" />
+
+    <style name="AppTheme.Text.FilterDialog.Hint">
+        <item name="android:textSize">@dimen/bottomdialog_hint_text_size</item>
+        <item name="android:textColor">?themeFilterDialogHintTextColor</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.Chip" />
+
+    <style name="AppTheme.Chip.Outlined">
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="AppTheme.Chip.Outlined.Choice.TopHeadlines" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/choicechip_topheadlines_background_state</item>
+        <item name="android:textColor">@color/choicechip_topheadlines_text_state</item>
+        <item name="chipStrokeColor">@color/choicechip_topheadlines_border_state</item>
+        <item name="rippleColor">?themeChoiceCheckedChipTopHeadlinesBorderColor</item>
+    </style>
+
+    <style name="AppTheme.Chip.Outlined.Choice.AllArticles" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/choicechip_allarticles_background_state</item>
+        <item name="android:textColor">@color/choicechip_allarticles_text_state</item>
+        <item name="chipStrokeColor">@color/choicechip_allarticles_border_state</item>
+        <item name="rippleColor">?themeChoiceCheckedChipAllArticlesBorderColor</item>
+    </style>
+
+    <style name="AppTheme.Chip.Outlined.Filter" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/filterchip_background_state</item>
+        <item name="android:textColor">@color/filterchip_foreground_state</item>
+        <item name="chipStrokeColor">@color/filterchip_border_state</item>
+        <item name="rippleColor">?themeFilterCheckedChipBorderColor</item>
+        <item name="checkedIcon">@drawable/ic_filterchip_check</item>
     </style>
 
 </resources>

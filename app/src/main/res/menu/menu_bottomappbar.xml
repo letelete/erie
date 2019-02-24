@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_bottomappbar_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_scrollToTop"
+        android:icon="@drawable/ic_bottomappbar_scroll_to_top"
+        android:title="@string/scroll_to_the_top"
+        app:showAsAction="ifRoom" />
+</menu>

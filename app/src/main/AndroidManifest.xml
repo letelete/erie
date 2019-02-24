@@ -11,9 +11,9 @@
                  android:label="@string/app_name"
                  android:roundIcon="@mipmap/ic_launcher_round"
                  android:supportsRtl="true"
-                 android:theme="@style/ErieTheme">
+                 android:theme="@style/AppTheme.NoActionBar.Light">
         <activity android:name=".ui.SplashScreenActivity"
-                  android:theme="@style/ErieTheme.Launcher">
+                  android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,11 +23,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.feed.FeedActivity" android:label="@string/app_name"
-                  android:configChanges="orientation|screenSize"
-                  android:theme="@style/ErieTheme"/>
+        <activity android:name=".ui.erie.ErieActivity" android:label="@string/app_name"
+                  android:configChanges="orientation|screenSize" />
 
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

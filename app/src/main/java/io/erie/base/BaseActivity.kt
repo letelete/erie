@@ -1,31 +1,32 @@
 package io.erie.base
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import dagger.android.support.DaggerAppCompatActivity
+import io.erie.R
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BasePresenter<Any>> : AppCompatActivity() {
+abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var presenter: P
 
-    protected abstract fun inject()
-    protected abstract fun getLayout(): Int
+    abstract fun getLayout(): Int
+    abstract fun initialize()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        inject()
+        setupTheme()
         super.onCreate(savedInstanceState)
         setContentView(getLayout())
-        initPresenter()
-    }
-
-    private fun initPresenter() {
         presenter.attachView(this)
-        presenter.initialize()
+        initialize()
     }
 
     override fun onDestroy() {
         presenter.detachView()
         super.onDestroy()
+    }
+
+    private fun setupTheme() {
+        setTheme(R.style.AppTheme_NoActionBar_Light)
     }
 }

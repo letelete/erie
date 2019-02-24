@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_allArticles_filterDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?themeFilterDialogBackgroundColor">
+
+    <TextView
+        android:id="@+id/textView_allArticles_languagesHint"
+        style="@style/AppTheme.Text.FilterDialog.Hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_text_margin_horizontal"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+        android:text="@string/languages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_allArticles_languages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_allArticles_languagesHint">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_allArticles_languages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/bottomdialog_buttons_margin_horizontal"
+            android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+            app:chipSpacing="@dimen/chips_spacing"
+            app:singleLine="true"
+            app:singleSelection="false" />
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/textView_allArticles_dateFromHint"
+        style="@style/AppTheme.Text.FilterDialog.Hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_text_margin_horizontal"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        android:text="@string/from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_allArticles_languages" />
+
+    <TextView
+        android:id="@+id/textView_allArticles_dateTo"
+        style="@style/AppTheme.Text.FilterDialog.Hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_text_margin_horizontal"
+        android:text="@string/to"
+        app:layout_constraintBottom_toBottomOf="@+id/chip_allArticles_dateTo"
+        app:layout_constraintStart_toStartOf="@+id/chip_allArticles_dateTo"
+        app:layout_constraintTop_toTopOf="@+id/textView_allArticles_dateFromHint"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_allArticles_dateFrom"
+        style="@style/AppTheme.Chip.Outlined.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_buttons_margin_horizontal"
+        android:layout_marginTop="@dimen/bottomdialog_buttons_margin_top"
+        android:layout_marginEnd="@dimen/bottomdialog_buttons_margin_horizontal"
+        android:layout_marginBottom="@dimen/bottomdialog_padding_bottom"
+        android:text="@string/select_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_allArticles_dateFromHint" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_allArticles_dateTo"
+        style="@style/AppTheme.Chip.Outlined.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_datechips_margin_horizontal"
+        android:text="@string/select_date"
+        app:layout_constraintBottom_toBottomOf="@+id/chip_allArticles_dateFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/chip_allArticles_dateFrom"
+        app:layout_constraintTop_toTopOf="@+id/chip_allArticles_dateFrom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

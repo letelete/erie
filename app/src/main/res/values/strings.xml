@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">Erie</string>
-    <string name="logo_description">App Logo</string>
-    <string name="discussion">Discussion</string>
-    <string name="we_just_ran_out_of_stories">We just ran out of stories :(</string>
+    <string name="top_headlines">Top Headlines</string>
+    <string name="all_articles">All Articles</string>
+    <string name="sources">Sources</string>
+    <string name="show_in_languages">Show in languages</string>
+    <string name="show_in_date_range">Show in date range</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="select_date">Select date</string>
+    <string name="show_articles_from_my_sources_only">Show articles from my sources only</string>
+    <string name="configure_sources">Configure sources</string>
+    <string name="article_thumbnail">Article Thumbnail</string>
+    <string name="search">Search</string>
+    <string name="menu">Menu</string>
+    <string name="bottom_sheet_dialog_peek">Bottom Sheet Dialog Peek</string>
+    <string name="settings">Settings</string>
+    <string name="app_theme">App theme</string>
+    <string name="countries">Countries</string>
+    <string name="categories">Categories</string>
+    <string name="languages">Languages</string>
+    <string name="change_theme_button">Change theme button</string>
+    <string name="scroll_to_the_top">Scroll to the top</string>
 </resources>

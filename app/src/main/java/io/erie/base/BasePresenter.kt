@@ -4,9 +4,7 @@ import io.reactivex.disposables.CompositeDisposable
 
 abstract class BasePresenter<out V> {
     private var view: V? = null
-    protected var compositeObservable = CompositeDisposable()
-
-    abstract fun initialize()
+    private var compositeObservable = CompositeDisposable()
 
     fun getView(): V? = view
 
