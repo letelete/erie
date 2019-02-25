@@ -29,4 +29,4 @@ Technologies:
 
 3 color modes: Dark, Amoled, Light
 
-![concept](./art/concept.jpg)
+![concept](./art/preview.jpg)
