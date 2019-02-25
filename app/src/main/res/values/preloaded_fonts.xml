@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/open_sans</item>
+        <item>@font/open_sans_semibold</item>
         <item>@font/playfair_display_bold</item>
     </array>
 </resources>

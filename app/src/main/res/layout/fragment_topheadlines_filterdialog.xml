@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_topHeadlines_filterDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?themeFilterDialogBackgroundColor">
+
+    <TextView
+        android:id="@+id/textView_topHeadlines_countriesHint"
+        style="@style/AppTheme.Text.FilterDialog.Hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_text_margin_horizontal"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+        android:text="@string/countries"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_topHeadlines_countries"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_topHeadlines_countriesHint">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_allArticles_languages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/bottomdialog_buttons_margin_horizontal"
+            android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+            app:chipSpacing="@dimen/chips_spacing"
+            app:singleLine="true"
+            app:singleSelection="false" />
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView_topHeadlines_categoriesHint"
+        style="@style/AppTheme.Text.FilterDialog.Hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottomdialog_text_margin_horizontal"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+        android:text="@string/categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_topHeadlines_countries" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_topHeadlines_categories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottomdialog_category_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_topHeadlines_categoriesHint">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_topHeadlines_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/bottomdialog_buttons_margin_horizontal"
+            android:layout_marginEnd="@dimen/bottomdialog_text_margin_horizontal"
+            app:chipSpacing="@dimen/chips_spacing"
+            app:singleLine="true"
+            app:singleSelection="false" />
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

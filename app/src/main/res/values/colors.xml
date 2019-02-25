@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#f5f5f5</color>
-    <color name="colorAccent">#82FF98</color>
-    <color name="colorAccentSecondary">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white87">#DEFFFFFF</color>
+    <color name="white70">#B3FFFFFF</color>
+    <color name="white60">#99FFFFFF</color>
+    <color name="white20">#33FFFFFF</color>
+    <color name="white12">#1FFFFFFF</color>
+    <color name="white10">#1AFFFFFF</color>
 
-    <color name="colorElementsBackground">@color/colorPrimary</color>
-    <color name="colorAppBackground">@color/colorPrimaryDark</color>
+    <color name="white_dark">#F5F5F5</color>
 
-    <!-- 100, 87, 54 etc.. - OPACITY IN PERCENTAGE -->
-    <color name="colorBlack100">#000000</color>
-    <color name="colorBlack87">#DE000000</color>
-    <color name="colorBlack54">#8A000000</color>
+    <color name="black">#000000</color>
+    <color name="black87">#DE000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black14">#24000000</color>
+    <color name="black12">#1F000000</color>
+    <color name="black07">#12000000</color>
+
+    <color name="gray_light">#D5D5D5</color>
+    <color name="gray_medium">#292929</color>
+    <color name="gray_dark">#111111</color>
+
+    <color name="orange_aggressive">#FF6348</color>
+    <color name="orange_aggressive20">#33FF6348</color>
+
+    <color name="orange_peaceful">#ED6252</color>
+    <color name="orange_peaceful20">#33ED6252</color>
+
+    <color name="purple">#5352ED</color>
+    <color name="purple20">#335352ED</color>
 </resources>

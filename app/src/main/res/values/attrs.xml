@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themePrimaryColor" format="reference" />
+    <attr name="themePrimaryDarkColor" format="reference" />
+    <attr name="themeAccentColor" format="reference" />
+
+    <attr name="themeAppBackgroundColor" format="reference" />
+    <attr name="themeAppNavBarBackgroundColor" format="reference" />
+
+    <attr name="themeTopHeadlinesAccentColor" format="reference" />
+    <attr name="themeTopHeadlinesAccentColor20" format="reference" />
+    <attr name="themeAllArticlesAccentColor" format="reference" />
+    <attr name="themeAllArticlesAccentColor20" format="reference" />
+
+    <attr name="themeTopBarTitleTextColor" format="reference" />
+    <attr name="themeTopBarBackgroundColor" format="reference" />
+    <attr name="themeTopBarIconTintColor" format="reference" />
+
+    <attr name="themeArticleTitleTextColor" format="reference" />
+    <attr name="themeArticleDividerColor" format="reference" />
+    <attr name="themeArticleAuthorTextColor" format="reference" />
+    <attr name="themeArticleBadgeTextColor" format="reference" />
+    <attr name="themeArticleBadgeBackgroundColor" format="reference" />
+    <attr name="themeArticleDetailsTextColor" format="reference" />
+    <attr name="themeArticleCardBackgroundColor" format="reference" />
+    <attr name="themeArticleShadowColor" format="reference" />
+
+    <attr name="themeBottomBarTopHeadlinesFabColor" format="reference" />
+    <attr name="themeBottomBarAllArticlesFabColor" format="reference" />
+    <attr name="themeBottomBarIconsColor" format="reference" />
+    <attr name="themeBottomBarBackgroundColor" format="reference" />
+
+    <attr name="themeFilterDialogForegroundOnAccentColor" format="reference" />
+    <attr name="themeFilterDialogTopHeadlinesAccentColor" format="reference" />
+    <attr name="themeFilterDialogAllArticlesAccentColor" format="reference" />
+    <attr name="themeFilterDialogHintTextColor" format="reference" />
+    <attr name="themeFilterDialogBackgroundColor" format="reference" />
+
+    <attr name="themeChoiceCheckedChipTopHeadlinesTextColor" format="reference" />
+    <attr name="themeChoiceCheckedChipTopHeadlinesBorderColor" format="reference" />
+    <attr name="themeChoiceCheckedChipTopHeadlinesBackgroundColor" format="reference" />
+    <attr name="themeChoiceCheckedChipAllArticlesTextColor" format="reference" />
+    <attr name="themeChoiceCheckedChipAllArticlesBorderColor" format="reference" />
+    <attr name="themeChoiceCheckedChipAllArticlesBackgroundColor" format="reference" />
+    <attr name="themeChoiceChipTextColor" format="reference" />
+    <attr name="themeChoiceChipBorderColor" format="reference" />
+    <attr name="themeChoiceChipBackgroundColor" format="reference" />
+
+    <attr name="themeFilterCheckedChipForegroundColor" format="reference" />
+    <attr name="themeFilterCheckedChipBorderColor" format="reference" />
+    <attr name="themeFilterCheckedChipBackgroundColor" format="reference" />
+    <attr name="themeFilterChipForegroundColor" format="reference" />
+    <attr name="themeFilterChipBorderColor" format="reference" />
+    <attr name="themeFilterChipBackgroundColor" format="reference" />
+</resources>

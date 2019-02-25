@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout_erie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?themeAppBackgroundColor">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar_erie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="?themeBottomBarBackgroundColor"
+        app:fabAlignmentMode="center"
+        app:hideOnScroll="true"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/ic_bottomappbar_theme_0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingactionbutton_erie_filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_fab_filter"
+        app:layout_anchor="@id/bottomAppBar_erie" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

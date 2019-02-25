@@ -1,9 +1,8 @@
 package io.erie.di
 
-import android.app.Application
-import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
+import dagger.android.AndroidInjector
 import io.erie.ErieApp
 import io.erie.di.modules.NetworkModule
 import javax.inject.Singleton
@@ -12,19 +11,11 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidInjectionModule::class,
+        AppModule::class,
         NetworkModule::class,
         ActivityBuilder::class]
 )
-interface AppComponent {
-
-    fun inject(app: ErieApp)
-
+interface AppComponent : AndroidInjector<ErieApp> {
     @Component.Builder
-    interface Builder {
-
-        fun build(): AppComponent
-
-        @BindsInstance
-        fun application(app: Application): Builder
-    }
+    abstract class Builder : AndroidInjector.Builder<ErieApp>()
 }
