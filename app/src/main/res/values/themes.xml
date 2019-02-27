@@ -5,18 +5,24 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:navigationBarColor">?themeAppNavBarBackgroundColor</item>
+
         <item name="colorPrimary">?themePrimaryColor</item>
         <item name="colorPrimaryDark">?themePrimaryDarkColor</item>
         <item name="colorAccent">?themeAccentColor</item>
+
         <item name="themeTopHeadlinesAccentColor">@color/orange_aggressive</item>
         <item name="themeTopHeadlinesAccentColor20">@color/orange_aggressive20</item>
+
         <item name="themeAllArticlesAccentColor">@color/purple</item>
         <item name="themeAllArticlesAccentColor20">@color/purple20</item>
-        <item name="android:navigationBarColor">?themeAppNavBarBackgroundColor</item>
+
         <item name="themeBottomBarTopHeadlinesFabColor">?themeTopHeadlinesAccentColor</item>
         <item name="themeBottomBarAllArticlesFabColor">?themeAllArticlesAccentColor</item>
+
         <item name="themeFilterDialogTopHeadlinesAccentColor">?themeTopHeadlinesAccentColor</item>
         <item name="themeFilterDialogAllArticlesAccentColor">?themeAllArticlesAccentColor</item>
+
         <item name="themeChoiceCheckedChipTopHeadlinesTextColor">?themeTopHeadlinesAccentColor</item>
         <item name="themeChoiceCheckedChipTopHeadlinesBorderColor">?themeTopHeadlinesAccentColor</item>
         <item name="themeChoiceCheckedChipTopHeadlinesBackgroundColor">?themeTopHeadlinesAccentColor20</item>
@@ -24,6 +30,7 @@
         <item name="themeChoiceCheckedChipAllArticlesBorderColor">?themeAllArticlesAccentColor</item>
         <item name="themeChoiceCheckedChipAllArticlesBackgroundColor">?themeAllArticlesAccentColor</item>
         <item name="themeChoiceChipBackgroundColor">@android:color/transparent</item>
+
         <item name="themeFilterChipBackgroundColor">@android:color/transparent</item>
     </style>
 
@@ -33,8 +40,6 @@
     </style>
 
     <style name="AppTheme.NoActionBar.Light">
-        <item name="android:windowLightStatusBar">true</item>
-
         <item name="themePrimaryColor">@color/white</item>
         <item name="themePrimaryDarkColor">@color/white_dark</item>
         <item name="themeAccentColor">@color/orange_aggressive</item>
@@ -64,7 +69,6 @@
 
         <item name="themeChoiceChipTextColor">@color/black87</item>
         <item name="themeChoiceChipBorderColor">@color/black12</item>
-
 
         <item name="themeFilterCheckedChipForegroundColor">@color/black87</item>
         <item name="themeFilterCheckedChipBorderColor">@color/black87</item>

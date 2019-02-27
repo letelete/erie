@@ -4,7 +4,7 @@ import io.erie.base.BasePresenter
 import io.erie.commons.PreferencesManager
 import io.erie.commons.PreferencesManagerImpl.Companion.KEY_THEME
 
-class EriePresenter(val preferencesManager: PreferencesManager) :
+class EriePresenter(private val preferencesManager: PreferencesManager) :
     BasePresenter<ErieView>() {
 
     fun handleTabSelected(position: Int) {
@@ -27,9 +27,15 @@ class EriePresenter(val preferencesManager: PreferencesManager) :
         } else {
             oldThemeSelector + 1
         }
+
         preferencesManager.putInt(KEY_THEME, newSelector)
         getView()?.updateThemeSelector(newSelector)
         getView()?.recreateView()
+
+        when (newSelector) {
+            0 -> getView()?.setLightStatusBar()
+            else -> getView()?.clearLightStatusBar()
+        }
     }
 
     fun fetchThemeSelector() {

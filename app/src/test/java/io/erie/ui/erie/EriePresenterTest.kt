@@ -79,4 +79,18 @@ class EriePresenterTest {
         presenter.fetchThemeSelector()
         verify(view).updateThemeSelector(expectedValue)
     }
+
+    @Test
+    fun `should set light bar`() {
+        val nextThemeIsLight = -1
+        presenter.handleThemeChange(nextThemeIsLight, themesCollection)
+        verify(view).setLightStatusBar()
+    }
+
+    @Test
+    fun `should clear light bar`() {
+        val nextThemeIsDark = 0
+        presenter.handleThemeChange(nextThemeIsDark, themesCollection)
+        verify(view).clearLightStatusBar()
+    }
 }
