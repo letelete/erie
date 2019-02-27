@@ -6,4 +6,6 @@ interface ErieView {
     fun setAllArticlesColor()
     fun updateThemeSelector(themeSelector: Int)
     fun recreateView()
+    fun setLightStatusBar()
+    fun clearLightStatusBar()
 }
