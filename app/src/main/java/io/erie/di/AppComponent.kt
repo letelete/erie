@@ -5,6 +5,7 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import io.erie.ErieApp
 import io.erie.di.modules.NetworkModule
+import io.erie.di.modules.PreferencesModule
 import javax.inject.Singleton
 
 @Singleton
@@ -12,6 +13,7 @@ import javax.inject.Singleton
     modules = [
         AndroidInjectionModule::class,
         AppModule::class,
+        PreferencesModule::class,
         NetworkModule::class,
         ActivityBuilder::class]
 )
