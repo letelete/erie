@@ -12,13 +12,27 @@ abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity() 
 
     abstract fun getLayout(): Int
     abstract fun initialize()
+    abstract fun initializeThemeSelector()
+    abstract var themeSelector: Int
+
+    protected val themes: List<Int> = listOf(
+        R.style.AppTheme_NoActionBar_Light,
+        R.style.AppTheme_NoActionBar_Dark,
+        R.style.AppTheme_NoActionBar_Amoled
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setupTheme()
         super.onCreate(savedInstanceState)
-        setContentView(getLayout())
         presenter.attachView(this)
+        initializeThemeSelector()
+        setupTheme()
+        setContentView(getLayout())
         initialize()
+    }
+
+    private fun setupTheme() {
+        val themeResId = themes[themeSelector]
+        setTheme(themeResId)
     }
 
     override fun onDestroy() {
@@ -26,7 +40,4 @@ abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity() 
         super.onDestroy()
     }
 
-    private fun setupTheme() {
-        setTheme(R.style.AppTheme_NoActionBar_Light)
-    }
 }

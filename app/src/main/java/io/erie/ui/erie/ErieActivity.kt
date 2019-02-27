@@ -13,15 +13,19 @@ import kotlinx.android.synthetic.main.activity_erie.*
 import kotlinx.android.synthetic.main.content_main.*
 import javax.inject.Inject
 
-
 class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
 
     @Inject
     lateinit var viewPagerAdapter: ViewPagerAdapter
 
+    override var themeSelector: Int = 0
     var pagePosition: Int = 0
 
     override fun getLayout(): Int = R.layout.activity_erie
+
+    override fun initializeThemeSelector() {
+        presenter.fetchThemeSelector()
+    }
 
     override fun initialize() {
         setSupportActionBar(bottomAppBar_erie)
@@ -84,6 +88,15 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
             currentAccentColor
         }
 
+
+    override fun updateThemeSelector(themeSelector: Int) {
+        this.themeSelector = themeSelector
+    }
+
+    override fun recreateView() {
+        recreate()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_bottomappbar, menu)
         return true
@@ -96,7 +109,11 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
             R.id.action_scrollToTop -> {
             } // TODO
             android.R.id.home -> {
-            } // TODO
+                presenter.handleThemeChange(
+                    oldThemeSelector = themeSelector,
+                    availableThemes = themes
+                )
+            }
         }
         return true
     }
