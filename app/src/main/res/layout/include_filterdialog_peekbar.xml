@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_filterDialog_background"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:background="@drawable/shape_filterdialog_allarticles_peekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_filterDialog_title"
+        style="@style/AppTheme.Text.FilterDialog.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/bottomdialog_title_margin"
+        android:text="@string/apply_filters"
+        app:layout_constraintBottom_toBottomOf="@+id/view_filterDialog_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_filterDialog_background" />
+
+    <ImageButton
+        android:id="@+id/imageButton_filterDialog_closeDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/bottomdialog_title_margin"
+        android:background="@drawable/ic_filterdialog_close"
+        android:contentDescription="@string/close_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/view_filterDialog_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_filterDialog_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

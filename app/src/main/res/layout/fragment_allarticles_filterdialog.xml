@@ -7,6 +7,10 @@
     android:layout_height="wrap_content"
     android:background="?themeFilterDialogBackgroundColor">
 
+    <include
+        android:id="@+id/include_allArticles_peekBar"
+        layout="@layout/include_filterdialog_peekbar" />
+
     <TextView
         android:id="@+id/textView_allArticles_languagesHint"
         style="@style/AppTheme.Text.FilterDialog.Hint"
@@ -19,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/include_allArticles_peekBar" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView_allArticles_languages"

@@ -33,7 +33,9 @@
     <dimen name="bottomdialog_padding_bottom">24dp</dimen>
     <dimen name="bottomdialog_hint_text_size">12sp</dimen>
     <dimen name="bottomdialog_text_size">14sp</dimen>
-    <dimen name="bottomdialog_peek_height">36dp</dimen>
+    <dimen name="bottomdialog_title_size">16sp</dimen>
+    <dimen name="bottomdialog_peek_height">48dp</dimen>
+    <dimen name="bottomdialog_title_margin">16dp</dimen>
 
     <dimen name="chips_spacing">4dp</dimen>
 
