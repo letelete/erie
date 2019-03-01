@@ -7,6 +7,10 @@
     android:layout_height="wrap_content"
     android:background="?themeFilterDialogBackgroundColor">
 
+    <include
+        android:id="@+id/include_topHeadlines_peekBar"
+        layout="@layout/include_filterdialog_peekbar" />
+
     <TextView
         android:id="@+id/textView_topHeadlines_countriesHint"
         style="@style/AppTheme.Text.FilterDialog.Hint"
@@ -19,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/include_topHeadlines_peekBar" />
 
 
     <HorizontalScrollView
@@ -32,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_topHeadlines_countriesHint">
 
         <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup_allArticles_languages"
+            android:id="@+id/chipGroup_topHeadlines_countries"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/bottomdialog_buttons_margin_horizontal"

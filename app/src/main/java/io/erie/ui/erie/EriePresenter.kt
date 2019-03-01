@@ -42,4 +42,12 @@ class EriePresenter(private val preferencesManager: PreferencesManager) :
         val selector = preferencesManager.getInt(KEY_THEME, 0)
         getView()?.updateThemeSelector(selector)
     }
+
+    fun handleFilterButtonClicked(pagePosition: Int) {
+        when (pagePosition) {
+            0 -> getView()?.showTopHeadlinesFilterDialog()
+            1 -> getView()?.showAllArticlesFilterDialog()
+            else -> error("No such page position")
+        }
+    }
 }

@@ -10,20 +10,16 @@ import io.erie.ui.topheadlines.TopHeadlinesFragment
 class ViewPagerAdapter(fragmentManager: FragmentManager) :
     FragmentPagerAdapter(fragmentManager) {
 
-    private val pages: List<Fragment> = listOf(
-        TopHeadlinesFragment(),
-        AllArticlesFragment()
-    )
+    val pages = mutableListOf<Fragment>()
+    val pageIconRes = mutableListOf<Int>()
+    val pageTitleRes = mutableListOf<Int>()
 
-    val pagesIcons = intArrayOf(
-        R.drawable.ic_topbar_topheadlines,
-        R.drawable.ic_topbar_allarticles
-    )
-
-    val pagesTitles = intArrayOf(
-        R.string.top_headlines,
-        R.string.all_articles
-    )
+    fun addFragment(fragment: Fragment, iconResId: Int, titleResId: Int) {
+        pages.add(fragment)
+        pageIconRes.add(iconResId)
+        pageTitleRes.add(titleResId)
+        notifyDataSetChanged()
+    }
 
     override fun getItem(position: Int): Fragment = pages[position]
 

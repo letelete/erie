@@ -8,4 +8,6 @@ interface ErieView {
     fun recreateView()
     fun setLightStatusBar()
     fun clearLightStatusBar()
+    fun showTopHeadlinesFilterDialog()
+    fun showAllArticlesFilterDialog()
 }

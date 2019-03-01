@@ -70,6 +70,11 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="AppTheme.Text.FilterDialog.Title">
+        <item name="android:textSize">@dimen/bottomdialog_title_size</item>
+        <item name="android:textColor">?themeFilterDialogForegroundOnAccentColor</item>
+    </style>
+
     <style name="AppTheme.Chip" />
 
     <style name="AppTheme.Chip.Outlined">

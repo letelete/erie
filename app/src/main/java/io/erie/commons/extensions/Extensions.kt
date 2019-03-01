@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.annotation.AttrRes
 
 fun ViewGroup.inflate(layoutId: Int, attachToRoot: Boolean = false): View =
-    LayoutInflater.from(this.context).inflate(layoutId, this, attachToRoot)
+    LayoutInflater.from(context).inflate(layoutId, this, attachToRoot)
 
 fun Context.getColorFromAttr(
     @AttrRes attrColor: Int,

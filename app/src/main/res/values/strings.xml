@@ -21,4 +21,6 @@
     <string name="languages">Languages</string>
     <string name="change_theme_button">Change theme button</string>
     <string name="scroll_to_the_top">Scroll to the top</string>
+    <string name="apply_filters">Apply filters</string>
+    <string name="close_dialog">Close dialog</string>
 </resources>

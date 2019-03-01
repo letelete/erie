@@ -10,6 +10,7 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.verify
 import org.mockito.MockitoAnnotations
+import java.lang.IllegalStateException
 
 class EriePresenterTest {
 
@@ -92,5 +93,22 @@ class EriePresenterTest {
         val nextThemeIsDark = 0
         presenter.handleThemeChange(nextThemeIsDark, themesCollection)
         verify(view).clearLightStatusBar()
+    }
+
+    @Test
+    fun `should show top headlines dialog`() {
+        presenter.handleFilterButtonClicked(pagePosition = 0)
+        verify(view).showTopHeadlinesFilterDialog()
+    }
+
+    @Test
+    fun `should show all articles dialog`() {
+        presenter.handleFilterButtonClicked(pagePosition = 1)
+        verify(view).showAllArticlesFilterDialog()
+    }
+
+    @Test(expected = IllegalStateException::class)
+    fun `should throw error`() {
+        presenter.handleFilterButtonClicked(pagePosition = 666)
     }
 }
