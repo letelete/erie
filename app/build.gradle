@@ -6,40 +6,56 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
-apply plugin: 'jacoco-android'
+apply plugin: 'jacoco'
 
 android {
     androidExtensions {
         experimental = true
     }
+    lintOptions {
+        abortOnError false
+    }
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
+
     defaultConfig {
         applicationId "io.erie"
-        minSdkVersion 23
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            testCoverageEnabled true
         }
+    }
+
+    testOptions {
+        animationsDisabled = true
     }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.22.0'
     testImplementation 'org.mockito:mockito-inline:2.8.47'
     testImplementation 'androidx.test:core:1.1.0'
     testImplementation "org.robolectric:robolectric:4.2"
-    androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation "androidx.test.ext:junit:1.1.0"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
     // ui
     implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha02'
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
@@ -117,13 +133,13 @@ project.afterEvaluate {
                                            '**io/erie/di/**',
                                            '**io/erie/base/**',
                                            // Remove view utils
-                                           '**io/erie/commons/extensions/Extensions.class',
-                                           '**io/erie/commons/Constants.class',
+                                           '**io/erie/commons/extensions/**',
+                                           '**io/erie/ErieApp.class',
                                 ])
 
                 sourceDirectories = files(["src/main/kotlin",
-                                        "src/$productFlavorName/kotlin",
-                                        "src/$buildTypeName/kotlin"])
+                                           "src/$productFlavorName/kotlin",
+                                           "src/$buildTypeName/kotlin"])
 
                 executionData = files("${project.buildDir}/jacoco/${testTaskName}.exec")
             }

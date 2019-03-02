@@ -68,7 +68,9 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
             setupWithViewPager(viewPager_erie)
         }
         for (tabIndex in 0 until viewPagerAdapter.count) {
-            tablayout_erie_tabs.getTabAt(tabIndex)?.setIcon(viewPagerAdapter.pageIconRes[tabIndex])
+            tablayout_erie_tabs.getTabAt(tabIndex)?.apply {
+                setIcon(viewPagerAdapter.pageIconRes[tabIndex])
+            }
         }
 
         topHeadlinesFilterDialogFragment.listener = topHeadlinesFragment
