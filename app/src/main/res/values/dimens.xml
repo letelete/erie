@@ -8,6 +8,7 @@
     <dimen name="bottom_bar_height">56dp</dimen>
 
     <dimen name="article_margin_top">15dp</dimen>
+    <dimen name="article_margin_horizontal">15dp</dimen>
     <dimen name="article_title_margin_top">15dp</dimen>
     <dimen name="article_title_margin_horizontal">15dp</dimen>
     <dimen name="article_divider_margin_top">20dp</dimen>

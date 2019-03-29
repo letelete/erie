@@ -1,41 +1,36 @@
 language: android
 jdk: oraclejdk8
-
 android:
   components:
-    - tools
-    - platform-tools
-    - tools
-    - build-tools-28.0.3
-    - android-28
-    - android-22
-    - sys-img-armeabi-v7a-android-22
-
+  - tools
+  - platform-tools
+  - tools
+  - build-tools-28.0.3
+  - android-28
+  - android-22
+  - sys-img-armeabi-v7a-android-22
   licenses:
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
-    - 'android-sdk-preview-license-.+'
-
-
+  - android-sdk-license-.+
+  - google-gdk-license-.+
+  - android-sdk-preview-license-.+
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution
-
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
-
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.android/build-cache"
 before_script:
-  - chmod +x gradlew
-  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-  - emulator -avd test -no-skin -no-audio -no-window &
-  - android-wait-for-emulator
-  - adb shell input keyevent 82 &
-
+- chmod +x gradlew
+- echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+- emulator -avd test -no-skin -no-audio -no-window &
+- android-wait-for-emulator
+- adb shell input keyevent 82 &
 script:
-  - ./gradlew clean testDebugUnitTest createDebugCoverageReport --stacktrace
-
+- "./gradlew clean testDebugUnitTest createDebugCoverageReport --stacktrace"
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
+env:
+  global:
+    - secure: dKDErpMdIl0i/g3Co2AdaOohMTHzVMFOId8MYSuXhfYTml3WnAwDRcYO9bEbkjJDCHQP/6QYDV01KUSa/GcZwOj85W7NaRkcZhNGw0YN8XSEVTD4QrrP2B7c4bGLboHriCln6aNk6RJGj7JDvxzJAsLvHUczsunLxvORaviAtzvSxxCQ1zo4/f7wuQDIsO+N/Yhwc4qSnPM2eqqzVPVXoSq8YBDUjtdm4W3YcMWYien3iNm5hjkX78h3m1SMJ/ICAIwxa0OsxHu560b/WDa2dBxzzOhfVXZ63loP+2WcSm1fhlWQA5vYcAxhUoW2m4glxYwp8RnD2A1jkI29rANT/2fvdSeqi/17oYLU7JBGfiMQ7ZD5B5j/yejwl1aag43I9sNRXvVzhnKcQxqsmHTdcEMUw2whaeAkKe8i+blwU+STb3WLVjRnQi9qUVfabz+Joo1L9Omq/H4u2iEWaHVEzZKYOsCQewYDT1qGhZaJU0gfHo8Kb2Si/o6y82Cg2QG7z57wrHajII2RoeEGBssa88DRQoffgIlU9XS8S8TFBj3B1YST1ixIEC+EGEtZK+UlwMVClBCAVU/76MGtES/RbvF4hGElHIIHM9Ak+csJzE8H2BEqKBqc49dj6GuoppteIoa9sS1ynMA8+27bXqc8CrpEF/HL0jZ36gedhScB9xk=
