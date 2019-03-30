@@ -89,6 +89,8 @@ dependencies {
     // Paging
     implementation "androidx.paging:paging-runtime-ktx:2.1.0"
     implementation "androidx.paging:paging-rxjava2-ktx:2.1.0"
+    // java.time port for < 26 api
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.0'
 }
 
 project.afterEvaluate {

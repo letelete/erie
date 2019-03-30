@@ -23,4 +23,11 @@
     <string name="scroll_to_the_top">Scroll to the top</string>
     <string name="apply_filters">Apply filters</string>
     <string name="close_dialog">Close dialog</string>
+    <string name="monthInSingular">monthInSingular</string>
+    <string name="ago">ago</string>
+    <string name="monthsInPlural">months</string>
+    <string name="hourMark">h</string>
+    <string name="minMark">min</string>
+    <string name="dayInSingular">day</string>
+    <string name="daysInPlural">days</string>
 </resources>
