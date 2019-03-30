@@ -28,5 +28,5 @@ class ArticleViewHolder(private val view: View, private val humanDate: HumanDate
     }
 
     private fun formatArticleDetails() =
-        "${humanDate.timePeriod(article.publishedAt)} • ${article.readTime}"
+        "${humanDate.timePeriod(article.publishedAt)} • ${article.readTimeInMinutes} min read"
 }
