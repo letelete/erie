@@ -1,13 +1,18 @@
 package io.erie.ui.global.article
 
+import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import io.erie.commons.utils.HumanDate
 import io.erie.model.entities.ArticleEntity
 import kotlinx.android.synthetic.main.include_all_author.view.*
 import kotlinx.android.synthetic.main.item_article.view.*
+import javax.inject.Inject
 
-class ArticleViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+class ArticleViewHolder(private val view: View, private val humanDate: HumanDate) :
+    RecyclerView.ViewHolder(view) {
 
+    @Inject lateinit var context: Context
     private lateinit var article: ArticleEntity
 
     fun bind(article: ArticleEntity) {
@@ -22,7 +27,6 @@ class ArticleViewHolder(private val view: View) : RecyclerView.ViewHolder(view) 
         view.include_article_author.chip_author_badge.text = sourceName
     }
 
-    /* TODO: call to HumanDate class to get actual time period based on article.publishedAt */
     private fun formatArticleDetails() =
-        "published time period • ${article.readTime}"
+        "${humanDate.timePeriod(article.publishedAt)} • ${article.readTime}"
 }
