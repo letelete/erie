@@ -1,9 +1,6 @@
-package io.erie.commons
+package io.erie.commons.utils
 
-import io.erie.commons.utils.ArticleDiffUtilCallback
 import io.erie.model.entities.ArticleEntity
-import io.erie.model.responses.Article
-import io.erie.model.responses.Source
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
