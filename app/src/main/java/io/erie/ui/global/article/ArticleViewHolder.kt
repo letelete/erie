@@ -24,5 +24,5 @@ class ArticleViewHolder(private val view: View) : RecyclerView.ViewHolder(view) 
 
     /* TODO: call to HumanDate class to get actual time period based on article.publishedAt */
     private fun formatArticleDetails() =
-        "published time period • ${article.readTime}"
+        "published time period • ${article.readTimeInMinutes} min read"
 }

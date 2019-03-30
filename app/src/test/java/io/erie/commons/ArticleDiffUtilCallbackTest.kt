@@ -2,8 +2,6 @@ package io.erie.commons
 
 import io.erie.commons.utils.ArticleDiffUtilCallback
 import io.erie.model.entities.ArticleEntity
-import io.erie.model.responses.Article
-import io.erie.model.responses.Source
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
@@ -18,7 +16,7 @@ class ArticleDiffUtilCallbackTest {
             authorName = "author0",
             sourceName = "name0",
             publishedAt = "2019-03-27T05:52:21Z",
-            readTime = "5 min",
+            readTimeInMinutes = 5,
             articleUrl = "url0"
         )
     }
@@ -30,7 +28,7 @@ class ArticleDiffUtilCallbackTest {
             authorName = "author1",
             sourceName = "name1",
             publishedAt = "2019-03-27T05:52:21Z",
-            readTime = "3 min",
+            readTimeInMinutes = 3,
             articleUrl = "url1"
         )
     }

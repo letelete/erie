@@ -18,7 +18,7 @@ data class ArticleEntity(
     @ColumnInfo(name = "publishedDateTime")
     val publishedAt: String,
     @ColumnInfo(name = "readTime")
-    val readTime: String,
+    val readTimeInMinutes: Int,
     @ColumnInfo(name = "articleUrl")
     val articleUrl: String,
     @ColumnInfo(name = "fromTopHeadlines")
