@@ -17,7 +17,8 @@ class ArticleDiffUtilCallbackTest {
             title = "title0",
             authorName = "author0",
             sourceName = "name0",
-            articleDetails = "2019-03-27T05:52:21Z",
+            publishedAt = "2019-03-27T05:52:21Z",
+            readTime = "5 min",
             articleUrl = "url0"
         )
     }
@@ -28,7 +29,8 @@ class ArticleDiffUtilCallbackTest {
             title = "title1",
             authorName = "author1",
             sourceName = "name1",
-            articleDetails = "2019-03-28T05:52:21Z",
+            publishedAt = "2019-03-27T05:52:21Z",
+            readTime = "3 min",
             articleUrl = "url1"
         )
     }

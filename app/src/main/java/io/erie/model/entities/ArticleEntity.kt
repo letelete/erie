@@ -15,8 +15,10 @@ data class ArticleEntity(
     val authorName: String,
     @ColumnInfo(name = "sourceName")
     val sourceName: String,
-    @ColumnInfo(name = "articleDetails")
-    val articleDetails: String,
+    @ColumnInfo(name = "publishedDateTime")
+    val publishedAt: String,
+    @ColumnInfo(name = "readTime")
+    val readTime: String,
     @ColumnInfo(name = "articleUrl")
     val articleUrl: String,
     @ColumnInfo(name = "fromTopHeadlines")

@@ -29,7 +29,8 @@ class ArticleMapperTest {
             title = "title",
             authorName = "author",
             sourceName = "name",
-            articleDetails = "2019-03-27T05:52:21Z",
+            publishedAt = "2019-03-27T05:52:21Z",
+            readTime = "TODO",
             articleUrl = "url"
         )
     }
