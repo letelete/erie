@@ -2,9 +2,11 @@ package io.erie.ui.erie
 
 import android.content.res.ColorStateList
 import android.graphics.PorterDuff
+import android.os.Build
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.annotation.RequiresApi
 import com.google.android.material.tabs.TabLayout
 import io.erie.R
 import io.erie.base.BaseActivity
@@ -31,14 +33,13 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
         override fun onTabReselected(tab: TabLayout.Tab?) {}
         override fun onTabUnselected(tab: TabLayout.Tab?) {}
         override fun onTabSelected(tab: TabLayout.Tab?) {
-            pagePosition = tab!!.position
+            pagePosition = tab?.position ?: 0
             presenter.handleTabSelected(pagePosition)
         }
     }
 
     override var themeSelector: Int = 0
     private var pagePosition: Int = 0
-    private var currentAccentColor: Int? = null
 
     override fun getLayout(): Int = R.layout.activity_erie
 
@@ -48,7 +49,13 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
 
     override fun initialize() {
         setSupportActionBar(bottomAppBar_erie)
+        setupTabLayout()
+        setupDialogListeners()
+        setupFloatingActionButton()
+        presenter.handleTabSelected(pagePosition)
+    }
 
+    private fun setupTabLayout() {
         viewPagerAdapter.apply {
             addFragment(
                 topHeadlinesFragment,
@@ -61,7 +68,6 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
                 R.string.all_articles
             )
         }
-
         viewPager_erie.adapter = viewPagerAdapter
         tablayout_erie_tabs.apply {
             addOnTabSelectedListener(tabLayoutListener)
@@ -72,15 +78,17 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
                 setIcon(viewPagerAdapter.pageIconRes[tabIndex])
             }
         }
+    }
 
+    private fun setupDialogListeners() {
         topHeadlinesFilterDialogFragment.listener = topHeadlinesFragment
         allArticlesFilterDialogFragment.listener = allArticlesFragment
+    }
 
+    private fun setupFloatingActionButton() {
         floatingactionbutton_erie_filters.setOnClickListener {
             presenter.handleFilterButtonClicked(pagePosition)
         }
-
-        presenter.handleTabSelected(pagePosition)
     }
 
     override fun changeToolbarTitle(pagePosition: Int) {
@@ -89,54 +97,49 @@ class ErieActivity : BaseActivity<EriePresenter>(), ErieView {
     }
 
     override fun setTopHeadlinesColor() {
-        currentAccentColor = getColorFromAttr(R.attr.themeTopHeadlinesAccentColor)
-        changeAccentColor()
+        val color = getColorFromAttr(R.attr.themeTopHeadlinesAccentColor)
+        changeAccentColor(color)
     }
 
     override fun setAllArticlesColor() {
-        currentAccentColor = getColorFromAttr(R.attr.themeAllArticlesAccentColor)
-        changeAccentColor()
+        val color = getColorFromAttr(R.attr.themeAllArticlesAccentColor)
+        changeAccentColor(color)
     }
 
-    private fun changeAccentColor() {
-        val colorStateList = ColorStateList.valueOf(currentAccentColor!!)
+    private fun changeAccentColor(color: Int) {
+        val colorStateList = ColorStateList.valueOf(color)
         floatingactionbutton_erie_filters.apply {
             backgroundTintList = colorStateList
         }
         tablayout_erie_tabs.apply {
             tabRippleColor = colorStateList
-            setSelectedTabIndicatorColor(currentAccentColor!!)
+            setSelectedTabIndicatorColor(color)
         }
 
         for (tabIndex in 0 until viewPagerAdapter.count) {
+            val tabColor = when {
+                tabIndex != pagePosition -> getColorFromAttr(R.attr.themeTopBarIconTintColor)
+                else -> color
+            }
             tablayout_erie_tabs.getTabAt(tabIndex)?.icon?.setColorFilter(
-                getTabIconColor(tabIndex, currentAccentColor!!),
+                tabColor,
                 PorterDuff.Mode.SRC_IN
             )
         }
     }
 
-    private fun getTabIconColor(tabIndex: Int, currentAccentColor: Int) =
-        if (tabIndex != pagePosition) {
-            getColorFromAttr(R.attr.themeTopBarIconTintColor)
-        } else {
-            currentAccentColor
-        }
-
     override fun updateThemeSelector(themeSelector: Int) {
         this.themeSelector = themeSelector
     }
 
-    override fun recreateView() {
-        recreate()
-    }
-
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun setLightStatusBar() {
         var flags = window.decorView.systemUiVisibility
         flags = flags or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         window.decorView.systemUiVisibility = flags
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun clearLightStatusBar() {
         var flags = window.decorView.systemUiVisibility
         flags = flags and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()

@@ -30,7 +30,7 @@ class EriePresenter(private val preferencesManager: PreferencesManager) :
 
         preferencesManager.putInt(KEY_THEME, newSelector)
         getView()?.updateThemeSelector(newSelector)
-        getView()?.recreateView()
+        getView()?.recreateActivity()
 
         when (newSelector) {
             0 -> getView()?.setLightStatusBar()
