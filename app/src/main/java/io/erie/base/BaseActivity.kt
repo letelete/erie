@@ -5,7 +5,7 @@ import dagger.android.support.DaggerAppCompatActivity
 import io.erie.R
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity() {
+abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity(), BaseView {
 
     @Inject
     lateinit var presenter: P
@@ -38,6 +38,10 @@ abstract class BaseActivity<P : BasePresenter<Any>> : DaggerAppCompatActivity() 
     override fun onDestroy() {
         presenter.detachView()
         super.onDestroy()
+    }
+
+    override fun recreateActivity() {
+        recreate()
     }
 
 }
